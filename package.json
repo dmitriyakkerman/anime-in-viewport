@@ -1,0 +1,15 @@
+{
+  "name": "anime-in-viewport",
+  "version": "1.0.0",
+  "description": "Simple way to trigger Anime.js animations on scroll event",
+  "main": "src/anime-in-viewport.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dmitriy Akkerman",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriyakkerman/anime-in-viewport.git"
+  },
+  "license": "ISC"
+}
