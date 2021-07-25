@@ -19,23 +19,6 @@ class AnimeInViewport {
     }
 
     init() {
-        this.initOnLoad();
-        this.initOnScroll();
-    }
-
-    initOnLoad() {
-        this.initBase();
-    }
-
-    initOnScroll() {
-        let that = this;
-
-        window.addEventListener('scroll', function () {
-            that.initBase();
-        });
-    }
-
-    initBase() {
         let that = this;
 
         that.targets.forEach(function(targetElement) {
