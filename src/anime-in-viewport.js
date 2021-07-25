@@ -2,6 +2,15 @@ import { defaults } from "./defaults";
 
 class AnimeInViewport {
     constructor(targets, options, rootMargin, threshold) {
+
+        if(typeof targets !== 'string') {
+            throw new Error('Type of "targets" option should be a "string"');
+        }
+
+        if (typeof options !== 'function') {
+            throw new Error('Specify animation options');
+        }
+
         this.targets = [targets];
         this.options = options;
         this.rootMargin = rootMargin;
