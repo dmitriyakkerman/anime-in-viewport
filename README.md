@@ -30,7 +30,7 @@ Native Intersection Observer parameter for margin around the target element.
 *Default:* `0px`  
 
 ##### `threshold`
-Native Intersection Observer parameter which indicate at what percentage of the target's visibility the observer's callback should be executed.
+Native Intersection Observer parameter which indicate at what percentage of the target's visibility the animation should be executed.
 
 *Type:* Number   
 *Required:* `false`  
