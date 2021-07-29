@@ -1,5 +1,7 @@
 # anime-in-viewport
 
+![anime-in-viewport](/examples/example.gif)
+
 **Usage**
 
 1.Connect Anime.js and anime-in-viewport scripts.
