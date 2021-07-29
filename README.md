@@ -19,9 +19,7 @@ AnimeInViewport.init('.item', (el, i, l) => ({
     opacity: [0, 1],
     easing: "easeOutExpo",
     duration: 1000,
-    delay: () => {
-        return i * 300
-    }
+    delay: () => i * 300
 }), '0px', 0)
 ```
      
