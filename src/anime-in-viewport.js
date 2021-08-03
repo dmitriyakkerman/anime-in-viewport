@@ -35,7 +35,7 @@ import { defaults } from "./defaults";
                 let observer = new IntersectionObserver(
                     function(entries, observer) {
                         entries.forEach((entry, index) => {
-                            if(entry.intersectionRatio > 0) {
+                            if(entry.intersectionRatio > 0 || entry.boundingClientRect.y < 0) {
                                 if(!entry.target.classList.contains('animated')) {
                                     that.mergeOptions(entry, index, entries.length);
                                     entry.target.classList.add('animated');
