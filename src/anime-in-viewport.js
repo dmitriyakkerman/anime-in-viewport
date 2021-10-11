@@ -34,7 +34,6 @@ import { defaults } from "./defaults";
             let observer = new IntersectionObserver(
                 function(entries, observer) {
                     entries.forEach((entry, index) => {
-                        console.log(entry.target)
                         if(entry.isIntersecting) {
                             that.mergeOptions(entry, index, entries.length);
                             observer.unobserve(entry.target);
