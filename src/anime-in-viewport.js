@@ -31,26 +31,26 @@ import { defaults } from "./defaults";
         init() {
             let that = this;
 
-            that.targets.forEach(function(targetElement) {
-                let observer = new IntersectionObserver(
-                    function(entries, observer) {
-                        entries.forEach((entry, index) => {
-                            if(entry.isIntersecting) {
-                                that.mergeOptions(entry, index, entries.length);
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    },
-                    {
-                        rootMargin: that.rootMargin || defaults.rootMargin,
-                        threshold: that.threshold || defaults.threshold,
+            let observer = new IntersectionObserver(
+                function(entries, observer) {
+                    entries.forEach((entry, index) => {
+                        console.log(entry.target)
+                        if(entry.isIntersecting) {
+                            that.mergeOptions(entry, index, entries.length);
+                            observer.unobserve(entry.target);
+                        }
                     });
-
-                let targets = document.querySelectorAll(targetElement);
-                targets.forEach(function(target) {
-                    observer.observe(target);
+                },
+                {
+                    rootMargin: that.rootMargin || defaults.rootMargin,
+                    threshold: that.threshold || defaults.threshold,
                 });
+
+            let targets = document.querySelectorAll(that.targets);
+            targets.forEach(function(target) {
+                observer.observe(target);
             });
+
         }
 
         mergeOptions(entry, index, length) {
