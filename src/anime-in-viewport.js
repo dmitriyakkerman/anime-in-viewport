@@ -49,7 +49,6 @@ import { defaults } from "./defaults";
             targets.forEach(function(target) {
                 observer.observe(target);
             });
-
         }
 
         mergeOptions(entry, index, length) {
